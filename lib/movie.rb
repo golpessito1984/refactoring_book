@@ -1,3 +1,7 @@
+require 'regular_price'
+require 'new_release_price'
+require 'childrens_price'
+
 class Movie
 
   REGULAR = 0
@@ -5,10 +9,23 @@ class Movie
   CHILDRENS = 2
 
   attr_reader :title
-  attr_accessor :price_code
+  attr_accessor :price_code, :price
 
-  def initialize(title, price_code)
-    @title, @price_code = title, price_code
+  def price_code=(value)
+    @price_code = value
+    @price = case @price_code
+    when REGULAR
+       RegularPrice.new
+    when NEW_RELEASE
+       NewReleasePrice.new
+    when CHILDRENS
+       ChildrensPrice.new
+    end
+
+  end
+
+  def initialize(title)
+    @title = title
   end
 
 end

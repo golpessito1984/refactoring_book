@@ -13,3 +13,7 @@
 
 - Removing Temps
 'Remove total_amount, frequent_renter_points to total_amount and frequent_renter_points methods'
+
+- Rplace TypeCode with State/Strategy
+
+'Create RegularPrice, NewReleasePrice, ChildrensPrice'

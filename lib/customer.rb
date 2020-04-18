@@ -28,7 +28,9 @@ class Customer
   end
 
   def total_amount
-    @rentals.inject(0){ |sum, rental| sum + rental.charge }
+    @rentals.inject(0) do |sum, rental|
+      sum + rental.charge
+    end
   end
 
 end

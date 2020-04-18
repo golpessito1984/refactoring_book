@@ -9,8 +9,11 @@ RSpec.describe Customer, "#basic customer" do
 
       it "get rentals" do
 
-        movie1, movie2 = Movie.new("Terminator", Movie::REGULAR),
-                         Movie.new("Robocop", Movie::REGULAR)
+        movie1, movie2 = Movie.new("Terminator"),
+                         Movie.new("Robocop")
+
+        movie1.price_code = Movie::REGULAR
+        movie2.price_code = Movie::NEW_RELEASE
 
         rental1, rental2 = Rental.new(2, movie1),
                            Rental.new(3, movie2)
@@ -27,8 +30,11 @@ RSpec.describe Customer, "#basic customer" do
     describe "statement with rentals" do
 
       before(:each) do
-        movie1, movie2 = Movie.new("Terminator", Movie::REGULAR),
-                         Movie.new("Robocop", Movie::NEW_RELEASE)
+        movie1, movie2 = Movie.new("Terminator"),
+                         Movie.new("Robocop")
+
+        movie1.price_code = Movie::REGULAR
+        movie2.price_code = Movie::NEW_RELEASE
 
         rental1, rental2 = Rental.new(2, movie1),
                            Rental.new(3, movie2)
