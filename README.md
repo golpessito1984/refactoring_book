@@ -10,3 +10,6 @@
 
 - Move Method
 'Move Method amount_for(rental) and frequent_renter_points to Rental class'
+
+- Removing Temps
+'Remove total_amount, frequent_renter_points to total_amount and frequent_renter_points methods'

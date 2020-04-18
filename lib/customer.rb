@@ -14,7 +14,7 @@ class Customer
   end
 
   def statement
-    total_amount, frequent_renter_points = 0, 0
+    frequent_renter_points = 0
     result = "Rental Record for #{@name}\n"
 
     @rentals.each do |rental|
@@ -22,10 +22,13 @@ class Customer
       frequent_renter_points += rental.frequent_renter_points
 
       result+= "\t" + rental.movie.title + "\t" + this_amount.to_s + "\n"
-      total_amount+=this_amount
     end
     result+= "Amount owed is #{total_amount}\n"
     result+= "Your earned #{frequent_renter_points} frequent renter points"
+  end
+
+  def total_amount
+    @rentals.inject(0){ |sum, rental| sum + rental.charge }
   end
 
 end
