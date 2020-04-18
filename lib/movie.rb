@@ -10,6 +10,7 @@ class Movie
 
   attr_reader :title
   attr_accessor :price_code, :price
+  attr_writer :price
 
   def price_code=(value)
     @price_code = value

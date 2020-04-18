@@ -14,6 +14,9 @@
 - Removing Temps
 'Remove total_amount, frequent_renter_points to total_amount and frequent_renter_points methods'
 
-- Rplace TypeCode with State/Strategy
+- Replace TypeCode with State/Strategy
 
 'Create RegularPrice, NewReleasePrice, ChildrensPrice'
+
+- Add module DefaultPrice
+'Add module DefaultPrice to share functionality into ChildrensPrice and RegularPrice'
