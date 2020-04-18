@@ -6,4 +6,7 @@
 # Refactoring 1 Step
 
 - Extract Method
-'Extract case logic from Customer class to charge(rental) and frequent_renter_points to frequent_renter_points(rental, my_points)'
+'Extract case logic from Customer class to amount_for(rental) and frequent_renter_points to frequent_renter_points(rental, my_points)'
+
+- Move Method
+'Move Method amount_for(rental) and frequent_renter_points to Rental class'
