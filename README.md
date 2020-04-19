@@ -20,3 +20,5 @@
 
 - Add module DefaultPrice
 'Add module DefaultPrice to share functionality into ChildrensPrice and RegularPrice'
+
+- Remove code_price and reemplace with polimorphic class
